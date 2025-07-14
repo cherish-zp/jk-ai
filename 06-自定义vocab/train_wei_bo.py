@@ -1,8 +1,8 @@
 #模型训练
 import torch
-from MyData02 import MyDataset
+from MyData import MyDataset
 from torch.utils.data import DataLoader
-from net import Model
+from net_web import Model
 from transformers import BertTokenizer
 from torch.optim import AdamW
 #定义设备信息
@@ -68,7 +68,7 @@ if __name__ == '__main__':
     best_val_acc = 0.0
 
     # 从某次加载的训练参数开始训练，不写就是从头训练
-    model.load_state_dict(torch.load("/Users/zhangpeng/code_bigmodel/jk-ai/05-BERT-情感分析-微调/params/4_bert.pth"))
+    #model.load_state_dict(torch.load("/Users/zhangpeng/code_bigmodel/jk-ai/05-BERT-情感分析-微调/params/4_bert.pth"))
 
     for epoch in range(EPOCH):
 
@@ -113,7 +113,7 @@ if __name__ == '__main__':
             #根据验证准确率保存最优参数
             if val_acc > best_val_acc:
                 best_val_acc = val_acc
-                torch.save(model.state_dict(),"params/best_bert.pth")
+                torch.save(model.state_dict(),"params/best_bert_wei_bo.pth")
                 print(f"Epoch:{epoch}:保存最优参数：acc:{best_val_acc}")
 
         #保存最后一轮参数
