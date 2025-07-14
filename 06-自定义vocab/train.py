@@ -3,8 +3,8 @@ import torch
 from MyData import MyDataset
 from torch.utils.data import DataLoader
 from net import Model
-from transformers import BertTokenizer,AdamW
-
+from transformers import BertTokenizer
+from torch.optim import AdamW
 #定义设备信息
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 #定义训练的轮次
@@ -66,6 +66,9 @@ if __name__ == '__main__':
 
     #初始化最佳验证准确率
     best_val_acc = 0.0
+
+    # 从某次加载的训练参数开始训练，不写就是从头训练
+    model.load_state_dict(torch.load("/Users/zhangpeng/code_bigmodel/jk-ai/05-BERT-情感分析-微调/params/4_bert.pth"))
 
     for epoch in range(EPOCH):
 
