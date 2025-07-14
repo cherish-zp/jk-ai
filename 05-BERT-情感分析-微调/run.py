@@ -6,7 +6,7 @@ from transformers import BertTokenizer
 DEVICE = torch.device("mps" if torch.mps.is_available() else "cpu")
 print(DEVICE)
 
-token = BertTokenizer.from_pretrained(r"D:\PycharmProjects\disanqi\demo_5\model\bert-base-chinese\models--bert-base-chinese\snapshots\c30a6ed22ab4564dc1e3b2ecbf6e766b0611a33f")
+token = BertTokenizer.from_pretrained(r"/Users/zhangpeng/code_bigmodel/jk-ai/00-model/google-bert/bert-base-chinese/models--google-bert--bert-base-chinese/snapshots/8f23c25b06e129b6c986331a13d8d025a92cf0ea")
 names = ["负向评价","正向评价"]
 model = Model().to(DEVICE)
 
@@ -30,7 +30,7 @@ def collate_fn(data):
 
 def test():
     #加载训练参数
-    model.load_state_dict(torch.load("params/1_bert.pth",map_location=DEVICE))
+    model.load_state_dict(torch.load("params/3_bert.pth",map_location=DEVICE))
     #开启测试模式
     model.eval()
 
