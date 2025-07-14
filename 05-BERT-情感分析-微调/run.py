@@ -3,7 +3,7 @@ from net import Model
 from transformers import BertTokenizer
 
 #定义设备信息
-DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+DEVICE = torch.device("mps" if torch.mps.is_available() else "cpu")
 print(DEVICE)
 
 token = BertTokenizer.from_pretrained(r"D:\PycharmProjects\disanqi\demo_5\model\bert-base-chinese\models--bert-base-chinese\snapshots\c30a6ed22ab4564dc1e3b2ecbf6e766b0611a33f")

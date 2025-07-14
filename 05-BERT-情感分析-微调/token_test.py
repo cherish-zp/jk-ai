@@ -1,7 +1,7 @@
 from transformers import AutoTokenizer,BertTokenizer
 
 #加载字典和分词器
-token = BertTokenizer.from_pretrained(r"D:\PycharmProjects\disanqi\demo_5\model\bert-base-chinese\models--bert-base-chinese\snapshots\c30a6ed22ab4564dc1e3b2ecbf6e766b0611a33f")
+token = BertTokenizer.from_pretrained(r"/Users/zhangpeng/code_bigmodel/jk-ai/00-model/google-bert/bert-base-chinese/models--google-bert--bert-base-chinese/snapshots/8f23c25b06e129b6c986331a13d8d025a92cf0ea")
 # print(token)
 
 sents = ["价格在这个地段属于适中, 附近有早餐店,小饭店, 比较方便,无早也无所",

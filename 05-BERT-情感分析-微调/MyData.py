@@ -5,7 +5,7 @@ from datasets import load_from_disk
 class MyDataset(Dataset):
     def __init__(self,split):
         #从磁盘加载数据
-        self.dataset = load_from_disk(r"D:\PycharmProjects\disanqi\demo_5\data\ChnSentiCorp")
+        self.dataset = load_from_disk(r"/Users/zhangpeng/code_bigmodel/jk-ai/00-data/ChnSentiCorp")
         if split == 'train':
             self.dataset = self.dataset["train"]
         elif split == "test":
