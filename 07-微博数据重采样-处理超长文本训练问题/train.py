@@ -3,14 +3,15 @@ import torch
 from MyData import MyDataset
 from torch.utils.data import DataLoader
 from net import Model
-from transformers import BertTokenizer,AdamW
+from transformers import BertTokenizer
+from torch.optim import AdamW
 
 #定义设备信息
-DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+DEVICE = torch.device("mps" if torch.mps.is_available() else "cpu")
 #定义训练的轮次
 EPOCH= 30000
 
-token = BertTokenizer.from_pretrained(r"E:\PycharmProjects\demo_7\model\bert-base-chinese\models--bert-base-chinese\snapshots\c30a6ed22ab4564dc1e3b2ecbf6e766b0611a33f")
+token = BertTokenizer.from_pretrained(r"/Users/zhangpeng/code_bigmodel/jk-ai/00-model/google-bert/bert-base-chinese/models--google-bert--bert-base-chinese/snapshots/8f23c25b06e129b6c986331a13d8d025a92cf0ea")
 
 def collate_fn(data):
     sents = [i[0]for i in data]
@@ -36,7 +37,7 @@ def collate_fn(data):
 train_dataset = MyDataset("train")
 train_loader = DataLoader(
     dataset=train_dataset,
-    batch_size=2,
+    batch_size=4,
     shuffle=True,
     #舍弃最后一个批次的数据，防止形状出错
     drop_last=True,
@@ -47,7 +48,7 @@ train_loader = DataLoader(
 val_dataset = MyDataset("validation")
 val_loader = DataLoader(
     dataset=val_dataset,
-    batch_size=2,
+    batch_size=4,
     shuffle=True,
     #舍弃最后一个批次的数据，防止形状出错
     drop_last=True,
