@@ -4,7 +4,7 @@ from datasets import load_dataset
 class MyDataset(Dataset):
     def __init__(self,split):
         #从磁盘加载数据
-        self.dataset = load_dataset(path="csv",data_files=f"data/news/{split}.csv",split="train")
+        self.dataset = load_dataset(path="csv",data_files=f"/Users/zhangpeng/code_bigmodel/jk-ai/00-data/news/{split}.csv",split="train")
     def __len__(self):
         return len(self.dataset)
 

@@ -13,7 +13,7 @@ file_name6 = "new_validation.csv" ;
 
 file_names = [file_name1,file_name2,file_name3 , file_name4 , file_name5,file_name6];
 
-root_dir = "/Users/zhangpeng/code_bigmodel/jk-ai/00-data/Weibo/"
+root_dir = "/Users/zhangpeng/code_bigmodel/jk-ai/00-data/news/"
 
 for file_name in file_names:
     print(file_name + "==============================================start")
