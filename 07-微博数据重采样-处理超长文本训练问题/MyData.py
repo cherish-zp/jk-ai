@@ -15,5 +15,7 @@ class MyDataset(Dataset):
 
 if __name__ == '__main__':
     dataset = MyDataset("test")
-    for data in dataset:
-        print(data)
+    #for data in dataset:
+    #    print(data)
+
+    print( dataset.__getitem__(0))
