@@ -53,29 +53,28 @@ class BgeM3Embeddings(Embeddings):
 
 
 def main():
-    # Load environment variables
+
     try:
         env_path = os.path.join(os.path.dirname(__file__), ".env")
         load_dotenv(env_path, encoding="utf-8")
-        # Check if API key is available
+
         if not os.getenv("OPENAI_API_KEY"):
             print("Warning: OPENAI_API_KEY not found in environment variables")
     except Exception as e:
         print(f"Error loading environment variables: {str(e)}")
 
-    # Initialize LLM
+
     try:
         llm = ChatOpenAI(model="gpt-3.5-turbo")
     except Exception as e:
         print(f"Error initializing LLM: {str(e)}")
         return
 
-    # Set paths relative to project root
+
     project_root = pathlib.Path(__file__).parent.parent
     data_path = project_root / "00-data" / "Weibo" / "万条金融标准术语.csv"
     model_path = project_root / "00-model" / "BAAI" / "bge-m3" / "models--BAAI--bge-m3" / "snapshots" / "5617a9f61b028005a4858fdac845db406aefb181"
 
-    # Check if paths exist
     if not data_path.exists():
         print(f"Error: Data file not found at {data_path}")
         return
@@ -83,8 +82,7 @@ def main():
     if not model_path.exists():
         print(f"Error: Model not found at {model_path}")
         return
-    
-    # Load data
+
     try:
         print(f"Loading data from {data_path}")
         loader = CSVLoader(str(data_path))
@@ -94,14 +92,12 @@ def main():
         print(f"Error loading data: {str(e)}")
         return
 
-    # Determine device
     device = "cpu"
     if torch.cuda.is_available():
         device = "cuda"
     elif hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
         device = "mps"
-    
-    # Initialize embedding model
+
     try:
         print(f"Initializing embeddings with device: {device}")
         embeddings = BgeM3Embeddings(model_path=str(model_path), device=device)
@@ -109,7 +105,6 @@ def main():
         print(f"Error initializing embeddings: {str(e)}")
         return
 
-    # Create vector database
     try:
         print("Creating vector database...")
         # Simply use FAISS.from_documents for simplicity
@@ -119,10 +114,8 @@ def main():
         print(f"Error creating vector database: {str(e)}")
         return
 
-    # Create retriever
     retriever = db.as_retriever(search_kwargs={"k": 3})
 
-    # Create RAG chain
     template = """根据以下上下文信息回答问题: 根据我的输入来选出最中的一条结果:
     {context}
 
@@ -143,16 +136,14 @@ def main():
         print(f"\n执行查询: '{query}'")
         print("检索相关文档...")
         docs = retriever.get_relevant_documents(query)
-        
         print(f"找到 {len(docs)} 个相关文档")
-        
         context_str = "\n\n".join([d.page_content for d in docs])
-        print("\n检索到的内容:")
+
         print(context_str)
         
-        print("\n生成回答中...")
+
         result = rag_chain.invoke(query)
-        print(f"\n最终结果: {result}")
+
     except Exception as e:
         print(f"查询失败: {str(e)}")
 
