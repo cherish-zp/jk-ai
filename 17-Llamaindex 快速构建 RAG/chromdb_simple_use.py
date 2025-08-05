@@ -12,7 +12,7 @@ class SentenceTransformerEmbeddingFunction:
 
 # 创建/加载集合（含自定义嵌入函数）
 embed_model = SentenceTransformerEmbeddingFunction(
-    model_path="/Users/zhangpeng/code_bigmodel/jk-ai/00-model/modelscope/sungw111/text2vec-base-chinese-sentence",
+    model_path="/00-model/modelscope/embedding_model/sungw111/text2vec-base-chinese-sentence",
     device="mps"  # 无 GPU 改为 "cpu"
 )
 
