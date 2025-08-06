@@ -7,4 +7,4 @@ class Config:
     PERSIST_DIR = "/Users/zhangpeng/code_bigmodel/jk-ai/rag_law/storage"
 
     COLLECTION_NAME = "chinese_labor_laws"
-    TOP_K = 3
+    TOP_K = 10
