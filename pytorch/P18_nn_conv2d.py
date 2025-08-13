@@ -11,7 +11,7 @@ test_loader = torch.utils.data.DataLoader(dataset=test_data, batch_size=64, shuf
 class TuDou(nn.Module):
     def __init__(self):
         super(TuDou, self).__init__()
-        self.conv1 = nn.Conv2d(in_channels=3, out_channels=6, kernel_size=3, stride=1, padding=0)
+        self.conv1 = nn.Conv2d(in_channels=3, out_channels=3, kernel_size=3, stride=1, padding=0)
     def forward(self, x):
         x = self.conv1(x)
         return x
@@ -25,9 +25,10 @@ for data in test_loader:
 
     print(inputsImages.shape)
     print(output.shape)
+    # add_images 只能增加3通道的 所有进行转化
     output = torch.reshape(output, (-1,3,30,30))
-    writer.add_images('outputs', inputsImages, step)
-    writer.add_images('outputs2', output, step)
+    writer.add_images('-outputs', inputsImages, step)
+    writer.add_images('-outputs2', output, step)
 
     step += 1
 
