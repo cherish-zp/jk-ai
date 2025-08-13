@@ -14,7 +14,7 @@ print(img)
 # toTensor
 trans_totensor = transforms.ToTensor()
 img_tensor = trans_totensor(img)
-
+print(img_tensor)
 writer.add_image("Tensor_img" , img_tensor)
 
 # Normalize
