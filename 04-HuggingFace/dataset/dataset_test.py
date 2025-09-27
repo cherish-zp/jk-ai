@@ -1,8 +1,8 @@
 from datasets import load_dataset,load_from_disk
 
 #在线加载数据
-# dataset = load_dataset(path="NousResearch/hermes-function-calling-v1",split="train")
-# print(dataset)
+dataset = load_dataset(path="NousResearch/hermes-function-calling-v1",split="train")
+print(dataset)
 #加载本地磁盘数据
 dataset = load_from_disk(r"D:\PycharmProjects\disanqi\demo_5\data\ChnSentiCorp")
 print(dataset)
