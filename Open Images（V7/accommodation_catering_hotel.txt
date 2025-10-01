@@ -1,0 +1,40 @@
+
+
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/chinese/high/rank_00000.parquet --local_dir /Volumes/zpDisk/data
+
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/chinese/low/rank_00135.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/chinese/low/rank_00136.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/chinese/low/rank_00137.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/chinese/low/rank_00138.parquet --local_dir /Volumes/zpDisk/data
+
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/chinese/middle/rank_00302.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/chinese/middle/rank_00303.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/chinese/middle/rank_00304.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/chinese/middle/rank_00305.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/chinese/middle/rank_00306.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/chinese/middle/rank_00307.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/chinese/middle/rank_00308.parquet --local_dir /Volumes/zpDisk/data
+
+#
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/high/rank_00726.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/high/rank_00727.parquet --local_dir /Volumes/zpDisk/data
+
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/low/rank_01551.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/low/rank_01552.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/low/rank_01553.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/low/rank_01554.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/low/rank_01555.parquet --local_dir /Volumes/zpDisk/data
+
+
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/middle/rank_01863.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/middle/rank_01864.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/middle/rank_01865.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/middle/rank_01866.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/middle/rank_01867.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/middle/rank_01868.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/middle/rank_01869.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/middle/rank_01870.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/middle/rank_01871.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/middle/rank_01872.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/middle/rank_01873.parquet --local_dir /Volumes/zpDisk/data
+modelscope download --dataset BAAI/IndustryCorpus2 accommodation_catering_hotel/english/middle/rank_01874.parquet --local_dir /Volumes/zpDisk/data
