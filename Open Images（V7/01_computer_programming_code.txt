@@ -1,0 +1,18 @@
+modelscope download --dataset BAAI/IndustryCorpus2 computer_programming_code/chinese/high/rank_00025.parquet  --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 computer_programming_code/chinese/low/rank_00163.parquet  --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 computer_programming_code/chinese/middle/rank_00380.parquet  --local_dir /Volumes/dataset01/data
+
+modelscope download --dataset BAAI/IndustryCorpus2 computer_programming_code/english/high/rank_00864.parquet  --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 computer_programming_code/english/high/rank_00865.parquet  --local_dir /Volumes/dataset01/data
+
+modelscope download --dataset BAAI/IndustryCorpus2 computer_programming_code/english/low/rank_01598.parquet  --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 computer_programming_code/english/low/rank_01599.parquet  --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 computer_programming_code/english/low/rank_01600.parquet  --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 computer_programming_code/english/low/rank_01601.parquet  --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 computer_programming_code/english/low/rank_01602.parquet  --local_dir /Volumes/dataset01/data
+
+modelscope download --dataset BAAI/IndustryCorpus2 computer_programming_code/english/middle/rank_02027.parquet  --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 computer_programming_code/english/middle/rank_02028.parquet  --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 computer_programming_code/english/middle/rank_02029.parquet  --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 computer_programming_code/english/middle/rank_02030.parquet  --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 computer_programming_code/english/middle/rank_02031.parquet  --local_dir /Volumes/dataset01/data
