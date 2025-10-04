@@ -1,0 +1,41 @@
+
+
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/high/rank_00128.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/high/rank_00129.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/high/rank_00130.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/low/rank_00293.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/low/rank_00294.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/low/rank_00295.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/low/rank_00296.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/low/rank_00297.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/middle/rank_00698.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/middle/rank_00699.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/middle/rank_00700.parquet   --local_dir /Volumes/dataset01/data
+
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/middle/rank_00701.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/middle/rank_00702.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/middle/rank_00703.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/middle/rank_00704.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/middle/rank_00705.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/middle/rank_00706.parquet   --local_dir /Volumes/dataset01/data
+
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/middle/rank_00707.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/middle/rank_00708.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/middle/rank_00709.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/middle/rank_00710.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/middle/rank_00711.parquet   --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/chinese/middle/rank_00712.parquet   --local_dir /Volumes/dataset01/data
+
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/english/high/rank_01529.parquet --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/english/high/rank_01530.parquet --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/english/high/rank_01531.parquet --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/english/high/rank_01532.parquet --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/english/high/rank_01533.parquet --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/english/high/rank_01534.parquet --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/english/low/rank_01852.parquet --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/english/low/rank_01853.parquet --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/english/low/rank_01854.parquet --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/english/low/rank_01855.parquet --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/english/low/rank_01856.parquet --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/english/low/rank_01857.parquet --local_dir /Volumes/dataset01/data
+modelscope download --dataset BAAI/IndustryCorpus2 tourism_geography/english/low/rank_01858.parquet --local_dir /Volumes/dataset01/data
