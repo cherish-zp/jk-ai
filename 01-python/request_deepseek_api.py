@@ -1,12 +1,9 @@
 import os
 import logging
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from openai import OpenAI
-
-
-## pip install fastapi uvicorn openai pydantic
-
 
 # 配置日志
 logging.basicConfig(
@@ -19,8 +16,23 @@ logging.basicConfig(
 )
 logger = logging.getLogger("deepseek_api")
 
-# 创建 FastAPI 应用实例 - 这个必须命名为 app
+# 创建 FastAPI 应用实例
 app = FastAPI(title="DeepSeek API 代理服务")
+
+# 添加 CORS 中间件
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:8080",
+        "http://127.0.0.1:8080",
+        "http://localhost:8000",
+        "http://127.0.0.1:8000",
+        # 可以添加其他需要允许的域名
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],  # 允许所有方法，包括 OPTIONS
+    allow_headers=["*"],  # 允许所有头
+)
 
 # 初始化 OpenAI 客户端
 client = OpenAI(
@@ -50,7 +62,7 @@ async def chat_with_deepseek(request: ChatRequest):
     try:
         # 记录用户请求内容
         logger.info(f"用户请求内容: {request.content}")
-        ## logger.info(f"系统提示词: {request.system_prompt}")
+        logger.info(f"系统提示词: {request.system_prompt}")
 
         # 调用 DeepSeek API
         response = client.chat.completions.create(
@@ -91,7 +103,12 @@ async def health_check():
     return {"status": "healthy"}
 
 
-# 如果直接运行此文件
+# 专门处理 OPTIONS 请求（可选，CORS 中间件通常会自动处理）
+@app.options("/chat")
+async def options_chat():
+    return {"message": "OK"}
+
+
 if __name__ == "__main__":
     import uvicorn
 
