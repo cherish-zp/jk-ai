@@ -4,6 +4,10 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from openai import OpenAI
 
+
+## pip install fastapi uvicorn openai pydantic
+
+
 # 配置日志
 logging.basicConfig(
     level=logging.INFO,
@@ -46,7 +50,7 @@ async def chat_with_deepseek(request: ChatRequest):
     try:
         # 记录用户请求内容
         logger.info(f"用户请求内容: {request.content}")
-        logger.info(f"系统提示词: {request.system_prompt}")
+        ## logger.info(f"系统提示词: {request.system_prompt}")
 
         # 调用 DeepSeek API
         response = client.chat.completions.create(
