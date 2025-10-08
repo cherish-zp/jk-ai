@@ -3,6 +3,13 @@
 # ==============================
 import os
 
+## export TRANSFORMERS_OFFLINE=1
+## export HF_DATASETS_OFFLINE=1
+## export HF_HUB_OFFLINE=1
+
+# uvicorn  request_deepseek_api_self_1:app --host 0.0.0.0 --port 8000 --reload
+#
+
 # 设置环境变量 - macOS 适配
 os.environ['TRANSFORMERS_OFFLINE'] = '1'  # 改为0允许下载模型
 os.environ['HF_DATASETS_OFFLINE'] = '0'
